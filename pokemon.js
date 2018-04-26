@@ -12,7 +12,7 @@ class Pokemon {
             throw new TypeError('Invalid atk');
         else if (typeof(legend) !== "boolean")
             throw new TypeError('Invalid legend');
-        else{
+        else {
             this.name = name;
             this.type = type;
             this.hp = hp;
@@ -24,8 +24,8 @@ class Pokemon {
         }
     }
     
-    attack(target){
-        if (target instanceof Pokemon){
+    attack(target) {
+        if (target instanceof Pokemon) {
             if ( (this.atk - target.def) > 0 )
                 target.hp = target.hp - (this.atk - target.def);
         }
@@ -33,7 +33,7 @@ class Pokemon {
             throw new TypeError('Target is not a pokemon');
     }
 
-    aliveCheck(){
+    aliveCheck() {
         if (this.hp > 0)
             return true;
         else
